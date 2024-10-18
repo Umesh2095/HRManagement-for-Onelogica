@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_n0irQI1OEe-akqZAOxnvEg" targetNamespace="http://tns.tibco.com/bw/composite/HR_Management_System.module" name="HR_Management_System.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_tX4tII1QEe-akqZAOxnvEg" name="fetchemployeeinformation" promote="ComponentProcess/fetchemployeeinformation">
+    <sca:interface.wsdl xmi:id="_tYM2MI1QEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018181350PLT#wsdl.interface(fetchemployeeinformation)" scaext:wsdlLocation="../Processes/hr_management_system/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_tYct0I1QEe-akqZAOxnvEg" name="RestService" path="/fetchemployeeinformation" docBasePath="http://localhost:7777/HR_Management_System.module" docResourcePath="FetchEmployeeInformation" basePath="/" connector="hr_management_system.module.FetchEmployeeInformation" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/hr_management_system.module.Process-FetchEmployeeInformation.json" policySets="Hr_managment.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_tYd78I1QEe-akqZAOxnvEg" operationName="post" nickname="post-fetchemployeeinformation" httpMethod="POST" notes="postFetchEmployeeInformation" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_tYnF4I1QEe-akqZAOxnvEg"/>
+      <advancedConfig xmi:id="_tYct0Y1QEe-akqZAOxnvEg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_tYd78Y1QEe-akqZAOxnvEg" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_9YvhoI1QEe-akqZAOxnvEg" name="UpdateEmployeeInformation" promote="ComponentProcess/UpdateEmployeeInformation">
+    <sca:interface.wsdl xmi:id="_9YvhpI1QEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018181350PLT#wsdl.interface(UpdateEmployeeInformation)" scaext:wsdlLocation="../Processes/hr_management_system/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_9YwvwI1QEe-akqZAOxnvEg" name="RestService1" path="/UpdateEmployeeInformation" docBasePath="http://localhost:7777/HR_Management_System.module" docResourcePath="FetchEmployeeInformation" basePath="/" connector="hr_management_system.module.FetchEmployeeInformation" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/hr_management_system.module.Process-FetchEmployeeInformation.json" policySets="Hr_managment.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_9YxW0I1QEe-akqZAOxnvEg" operationName="post" nickname="post-UpdateEmployeeInformation" httpMethod="POST" notes="postFetchEmployeeInformation" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_9Yyk8I1QEe-akqZAOxnvEg"/>
+      <advancedConfig xmi:id="_9YwvwY1QEe-akqZAOxnvEg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_9YxW0Y1QEe-akqZAOxnvEg" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_dhbmQo1aEe-akqZAOxnvEg" name="payroll" promote="ComponentPayroll/payroll">
+    <sca:interface.wsdl xmi:id="_dhcNU41aEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018193833PLT#wsdl.interface(payroll)" scaext:wsdlLocation="../Processes/hr_management_system/module/Payroll.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_dhc0YI1aEe-akqZAOxnvEg" name="RestService2" path="/payroll" docBasePath="http://localhost:7777/HR_Management_System.module" docResourcePath="Payroll" basePath="/" connector="hr_management_system.module.FetchEmployeeInformation" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/hr_management_system.module.Payroll-Payroll.json" policySets="Hr_managment.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_dhdbcI1aEe-akqZAOxnvEg" operationName="post" nickname="post-payroll" httpMethod="POST" notes="postPayroll" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_dheCgI1aEe-akqZAOxnvEg"/>
+      <advancedConfig xmi:id="_dhc0YY1aEe-akqZAOxnvEg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_dhdbcY1aEe-akqZAOxnvEg" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_EGqp0Y1fEe-akqZAOxnvEg" name="timeandattendance" promote="ComponentTimeAndAttendance/timeandattendance">
+    <sca:interface.wsdl xmi:id="_EGqp1Y1fEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018201130PLT#wsdl.interface(timeandattendance)" scaext:wsdlLocation="../Processes/hr_management_system/module/TimeAndAttendance.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_EGwwcI1fEe-akqZAOxnvEg" name="RestService3" path="/timeandattendance" docBasePath="http://localhost:7777/HR_Management_System.module" docResourcePath="TimeAndAttendance" basePath="/" connector="hr_management_system.module.FetchEmployeeInformation" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/hr_management_system.module.TimeAndAttendance-TimeAndAttendance.json" policySets="Hr_managment.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_EGzMsI1fEe-akqZAOxnvEg" operationName="post" nickname="post-timeandattendance" httpMethod="POST" notes="postTimeAndAttendance" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_EG4sQI1fEe-akqZAOxnvEg"/>
+      <advancedConfig xmi:id="_EGwwcY1fEe-akqZAOxnvEg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_EGzMsY1fEe-akqZAOxnvEg" bindingName="RestService3"/>
+  </sca:service>
+  <sca:property xmi:id="_oYmakI1OEe-akqZAOxnvEg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oYwLkI1OEe-akqZAOxnvEg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oY1EEI1OEe-akqZAOxnvEg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oY4HYI1OEe-akqZAOxnvEg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oY8_4I1OEe-akqZAOxnvEg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oZBRUI1OEe-akqZAOxnvEg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oZFiwI1OEe-akqZAOxnvEg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oZJ0MI1OEe-akqZAOxnvEg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oZOFoI1OEe-akqZAOxnvEg" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_oZSXEI1OEe-akqZAOxnvEg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_oHZ84I1OEe-akqZAOxnvEg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oHZ84Y1OEe-akqZAOxnvEg" processName="hr_management_system.module.Process"/>
+    <sca:service xmi:id="_tXxYYI1QEe-akqZAOxnvEg" name="fetchemployeeinformation">
+      <sca:interface.wsdl xmi:id="_tXzNkI1QEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018181350PLT#wsdl.interface(fetchemployeeinformation)"/>
+    </sca:service>
+    <sca:service xmi:id="_9Yu6kI1QEe-akqZAOxnvEg" name="UpdateEmployeeInformation">
+      <sca:interface.wsdl xmi:id="_9Yu6kY1QEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018181350PLT#wsdl.interface(UpdateEmployeeInformation)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_dha_MI1aEe-akqZAOxnvEg" name="ComponentPayroll" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_dha_MY1aEe-akqZAOxnvEg" processName="hr_management_system.module.Payroll"/>
+    <sca:service xmi:id="_dhbmQI1aEe-akqZAOxnvEg" name="payroll">
+      <sca:interface.wsdl xmi:id="_dhbmQY1aEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018193833PLT#wsdl.interface(payroll)" scaext:wsdlLocation="../Processes/hr_management_system/module/Payroll.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_EGnmgI1fEe-akqZAOxnvEg" name="ComponentTimeAndAttendance" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_EGnmgY1fEe-akqZAOxnvEg" processName="hr_management_system.module.TimeAndAttendance"/>
+    <sca:service xmi:id="_EGqCwI1fEe-akqZAOxnvEg" name="timeandattendance">
+      <sca:interface.wsdl xmi:id="_EGqp0I1fEe-akqZAOxnvEg" interface="http://xmlns.example.com/20241018201130PLT#wsdl.interface(timeandattendance)" scaext:wsdlLocation="../Processes/hr_management_system/module/TimeAndAttendance.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

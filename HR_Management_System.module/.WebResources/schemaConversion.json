@@ -1,0 +1,17 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/HR_Management_System.module/Service Descriptors/hr_management_system.module.Process-FetchEmployeeInformation.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/EmployeeInfoSchema"
+    },
+    {
+        "jsonSchemaLocation": "/HR_Management_System.module/Service Descriptors/hr_management_system.module.Payroll-Payroll.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/PayrollSchema"
+    },
+    {
+        "jsonSchemaLocation": "/HR_Management_System.module/Service Descriptors/hr_management_system.module.TimeAndAttendance-TimeAndAttendance.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/AttendanceSchema"
+    }
+]}

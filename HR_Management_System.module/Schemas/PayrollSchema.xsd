@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/PayrollSchema" xmlns:tns="http://www.example.org/PayrollSchema" elementFormDefault="qualified">
+
+    <element name="EmployeeName" type="tns:EmployeeName"></element>
+    
+    <complexType name="EmployeeName">
+    	<sequence>
+    		<element name="EmployeeName" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Salary" type="tns:Salary"></element>
+    
+    <complexType name="Salary">
+    	<sequence>
+    		<element name="TotalEarnings" type="string"></element>
+    		<element name="NetSalary" type="string"></element>
+    		<element name="Tax" type="string"></element>
+    		<element name="Deductions" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

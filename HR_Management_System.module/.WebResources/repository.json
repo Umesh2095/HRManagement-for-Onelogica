@@ -1,0 +1,17 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/hr_management_system.module.Process-FetchEmployeeInformation.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/hr_management_system.module.Payroll-Payroll.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/hr_management_system.module.TimeAndAttendance-TimeAndAttendance.json",
+            "type": "generated"
+        }
+    ]
+}

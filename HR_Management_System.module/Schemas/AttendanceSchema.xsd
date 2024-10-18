@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AttendanceSchema" xmlns:tns="http://www.example.org/AttendanceSchema" elementFormDefault="qualified">
+
+    <element name="Attendance" type="tns:Attendance"></element>
+    
+    <complexType name="Attendance">
+    	<sequence>
+    		<element name="EmployeeName" type="string"></element>
+    		<element name="Attendance" type="string"></element>
+    		<element name="Leave" type="string"></element>
+    		<element name="TimeAtWorkHrs" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Overview" type="tns:Overview"></element>
+    
+    <complexType name="Overview">
+    	<sequence>
+    		<element name="Attendance" type="string"></element>
+    		<element name="Overtime" type="string"></element>
+    		<element name="Leave" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

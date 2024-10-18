@@ -1,0 +1,100 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "FetchEmployeeInformation",
+    "description" : "FetchEmployeeInformation service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/fetchemployeeinformation" : {
+      "post" : {
+        "summary" : "fetches employee information from database",
+        "description" : "postFetchEmployeeInformation",
+        "operationId" : "post-fetchemployeeinformation",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmployeeName"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a EmployeeDetails to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/EmployeeDetails"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateEmployeeInformation" : {
+      "post" : {
+        "summary" : "Update Employee Information in the Database",
+        "description" : "postFetchEmployeeInformation",
+        "operationId" : "post-UpdateEmployeeInformation",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmployeeDetails"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a EmployeeDetails to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/EmployeeDetails"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "EmployeeDetails" : {
+      "type" : "object",
+      "required" : [ "JobRole", "Salary", "DocumentNameLocation", "ContactDetails", "PerformanceHistory", "Name" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "ContactDetails" : {
+          "type" : "string"
+        },
+        "JobRole" : {
+          "type" : "string"
+        },
+        "Salary" : {
+          "type" : "string"
+        },
+        "PerformanceHistory" : {
+          "type" : "string"
+        },
+        "DocumentNameLocation" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmployeeName" : {
+      "type" : "object",
+      "required" : [ "EmployeeName" ],
+      "properties" : {
+        "EmployeeName" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

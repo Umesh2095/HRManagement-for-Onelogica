@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EmployeeInfoSchema" xmlns:tns="http://www.example.org/EmployeeInfoSchema" elementFormDefault="qualified">
+
+    <element name="EmployeeDetails" type="tns:EmployeeDetails"></element>
+    
+    <complexType name="EmployeeDetails">
+    	<sequence>
+    		<element name="Name" type="string"></element>
+    		<element name="ContactDetails" type="string"></element>
+    		<element name="JobRole" type="string"></element>
+    		<element name="Salary" type="string"></element>
+    		<element name="PerformanceHistory" type="string"></element>
+    		<element name="DocumentNameLocation" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="EmployeeName" type="tns:EmployeeName"></element>
+    
+    <complexType name="EmployeeName">
+    	<sequence>
+    		<element name="EmployeeName" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

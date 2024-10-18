@@ -1,0 +1,74 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "TimeAndAttendance",
+    "description" : "TimeAndAttendance service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/timeandattendance" : {
+      "post" : {
+        "summary" : "Log Employee Attendance and Leave",
+        "description" : "postTimeAndAttendance",
+        "operationId" : "post-timeandattendance",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Attendance"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Overview to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Overview"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Attendance" : {
+      "type" : "object",
+      "required" : [ "Attendance", "TimeAtWorkHrs", "Leave", "EmployeeName" ],
+      "properties" : {
+        "EmployeeName" : {
+          "type" : "string"
+        },
+        "Attendance" : {
+          "type" : "string"
+        },
+        "Leave" : {
+          "type" : "string"
+        },
+        "TimeAtWorkHrs" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "Overview" : {
+      "type" : "object",
+      "required" : [ "Attendance", "Overtime", "Leave" ],
+      "properties" : {
+        "Attendance" : {
+          "type" : "string"
+        },
+        "Overtime" : {
+          "type" : "string"
+        },
+        "Leave" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

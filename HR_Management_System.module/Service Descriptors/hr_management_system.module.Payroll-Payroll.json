@@ -1,0 +1,68 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Payroll",
+    "description" : "Payroll service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/payroll" : {
+      "post" : {
+        "summary" : "Payroll Processing",
+        "description" : "postPayroll",
+        "operationId" : "post-payroll",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmployeeName"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Salary to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Salary"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Salary" : {
+      "type" : "object",
+      "required" : [ "TotalEarnings", "NetSalary", "Tax", "Deductions" ],
+      "properties" : {
+        "TotalEarnings" : {
+          "type" : "string"
+        },
+        "NetSalary" : {
+          "type" : "string"
+        },
+        "Tax" : {
+          "type" : "string"
+        },
+        "Deductions" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmployeeName" : {
+      "type" : "object",
+      "required" : [ "EmployeeName" ],
+      "properties" : {
+        "EmployeeName" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
